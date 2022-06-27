@@ -48,22 +48,24 @@ function concatName(arrayStrings) {
 return posicoes;
 }
 
-console.log(concatName['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+
+function footballPoints(wins, ties) {
+  let vitorias = wins * 3;
+  let empates = ties
+  let sum = vitorias + empates;
+  return sum
 }
+  console.log(footballPoints(14, 8));
+
+
+
+
+
+
+
+
+
 
 // Desafio 6
 function highestCount() {
