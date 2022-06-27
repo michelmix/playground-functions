@@ -10,6 +10,8 @@ let macaco = true;
 let girafa = true;
 console.log(compareTrue(macaco, girafa))
 
+
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2  
@@ -19,10 +21,18 @@ let valorBase = 10;
 let valorHeight = 50;
 console.log(calcArea(valorBase, valorHeight));
 
+
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+function splitSentence(frase) {
+  let stringArray = frase.split(" ")
+  return stringArray;
 }
+
+console.log(splitSentence("go Trybe", ""));
+
+
 
 // Desafio 4
 function concatName() {
