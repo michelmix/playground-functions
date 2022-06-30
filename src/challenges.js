@@ -60,17 +60,50 @@ function footballPoints(wins, ties) {
 
 
 
-
-
-
-
-
-
-
+ /* 6 - Crie uma função que calcula o número de repetições do maior número
+  Implemente a função highestCount que deverá retornar a quantidade de vezes que o maior número 
+  se repete ao receber um array de números.
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+//[9, 1, 2, 3, 9, 5, 7]*/
+
+
+function highestCount(arrayNumbers) {
+
+let contador = 0;
+  
+  let maiorNumero = arrayNumbers[0];
+  for (let index = 1; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] > maiorNumero) {
+      maiorNumero = arrayNumbers[index];
+    }
+  }
+  for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
+   
+    if (arrayNumbers[index2] === maiorNumero) {
+      contador += 1;  
+          
+    }   
+  }
+  return contador;
 }
+
+
+
+
+      
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 7
 function catAndMouse() {
