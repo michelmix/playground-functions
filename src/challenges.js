@@ -8,7 +8,7 @@ function compareTrue(parametro1, parametro2) {
 }
 let macaco = true;
 let girafa = true;
-console.log(compareTrue(macaco, girafa))
+console.log(compareTrue(macaco, girafa));
 
 
 
@@ -60,12 +60,7 @@ function footballPoints(wins, ties) {
 
 
 
- /* 6 - Crie uma função que calcula o número de repetições do maior número
-  Implemente a função highestCount que deverá retornar a quantidade de vezes que o maior número 
-  se repete ao receber um array de números.
-// Desafio 6
-//[9, 1, 2, 3, 9, 5, 7]*/
-
+ // Desafio 6 
 
 function highestCount(arrayNumbers) {
 
@@ -87,28 +82,30 @@ let contador = 0;
   return contador;
 }
 
-
-
-
-      
-    
-  
-  
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// 1, 0, 2  esperava os gatos trombam tá retornando cat1
+
+function catAndMouse(mouse, cat1, cat2) { 
+
+  if (cat1 === cat2 || mouse - cat1 === cat2 - mouse) {
+    return "os gatos trombam e o rato foge";
+  } else if (cat1 - mouse < cat2 - mouse) {
+    return "cat1";
+  } else {
+    return "cat2";
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 8
 function fizzBuzz() {
@@ -127,6 +124,18 @@ function decode() {
 function techList() {
   // seu código aqui
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = {
   calcArea,
