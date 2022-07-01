@@ -62,6 +62,7 @@ function footballPoints(wins, ties) {
 
  // Desafio 6 
 
+
 function highestCount(arrayNumbers) {
 
 let contador = 0;
@@ -83,7 +84,6 @@ let contador = 0;
 }
 
 // Desafio 7
-// 1, 0, 2  esperava os gatos trombam tá retornando cat1
 
 function catAndMouse(mouse, cat1, cat2) { 
 
@@ -94,22 +94,25 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return "cat2";
   }
-}
+} 
 
+// Desafio 8 ------------------------------------------------------------------------------------------------------
 
+function fizzBuzz(nums) {
+  let result = [];
 
-
-
-
-
-
-
-
-
-
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+  for (let index = 0; index < nums.length; index += 1) {
+    if (nums[index] % 3 === 0 && nums[index] % 5 === 0) {
+     result.push("fizzBuzz");
+    } else if (nums[index] % 3 === 0) {
+      result.push("fizz");
+    } else if (nums[index] % 5 === 0) {
+     result.push("buzz");
+    } else {
+     result.push("bug!");
+    }
+  }
+  return result;
 }
 
 // Desafio 9
@@ -124,18 +127,6 @@ function decode() {
 function techList() {
   // seu código aqui
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = {
   calcArea,
