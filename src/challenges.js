@@ -147,9 +147,38 @@ function decode(code) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTechNames, personName) {
+  let techList = [];
+  arrayTechNames.sort();
+  if (arrayTechNames.length!==0) {
+    for (let tech of arrayTechNames) {
+      techList.push({
+        tech: tech,
+        name: personName,
+      });
+    }
+    return techList;
+  } else {
+    return "Vazio!"
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = {
   calcArea,
