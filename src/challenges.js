@@ -1,183 +1,135 @@
-// Desafio 1 ---------------------------------------------------------------------------------------------------
-function compareTrue(parametro1, parametro2) {
-  if (parametro1 === true && parametro2 === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
-let macaco = true;
-let girafa = true;
-console.log(compareTrue(macaco, girafa));
-
-
-
-// Desafio 2---------------------------------------------------------------------------------------------------
-function calcArea(base, height) {
-  return (base * height) / 2
+// Desafio 1
+function compareTrue() {
+  // seu código aqui
 }
 
-let valorBase = 10;
-let valorHeight = 50;
-console.log(calcArea(valorBase, valorHeight));
-
-
-
-// Desafio 3 ---------------------------------------------------------------------------------------------------
-function splitSentence(frase) {
-  let stringArray = frase.split(" ")
-  return stringArray;
+// Desafio 2
+function calcArea() {
+  // seu código aqui
 }
 
-console.log(splitSentence("go Trybe", ""));
+// Desafio 3
+function splitSentence() {
+  // seu código aqui
+}
 
-
-// Desafio 4 ---------------------------------------------------------------------------------------------------
+// Desafio 4
 function concatName(arrayStrings) {
-  let primeiro;
-  let ultimo;
-  let posicoes;
-
   for (let index = 0; index < arrayStrings.length; index += 1) {
-    primeiro = arrayStrings[0];
-    ultimo = arrayStrings[arrayStrings.length - 1];
-    posicoes = ultimo + ", " + primeiro;
+    let primeiro = arrayStrings[0];
+    let ultimo = arrayStrings[arrayStrings.length - 1];
+    let posicoes = `${ultimo}, ${primeiro}`;
+    return posicoes;
   }
-
-  return posicoes;
 }
 
-// Desafio 5 ---------------------------------------------------------------------------------------------------
+// Desafio 5
 function footballPoints(wins, ties) {
-  let vitorias = wins * 3;
-  let empates = ties
-  let sum = vitorias + empates;
-  return sum
+  return (wins * 3) + (ties * 1);
 }
 console.log(footballPoints(14, 8));
 
-
-
-// Desafio 6 ---------------------------------------------------------------------------------------------------
+// Desafio 6
 function highestCount(arrayNumbers) {
-
+  let maiorNumero = arrayNumbers[0];
   let contador = 0;
 
-  let maiorNumero = arrayNumbers[0];
   for (let index = 1; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] > maiorNumero) {
       maiorNumero = arrayNumbers[index];
     }
   }
   for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
-
     if (arrayNumbers[index2] === maiorNumero) {
       contador += 1;
-
     }
   }
   return contador;
 }
 
-// Desafio 7 ---------------------------------------------------------------------------------------------------
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
-  if (cat1 === cat2 || mouse - cat1 === cat2 - mouse) {
-    return "os gatos trombam e o rato foge";
-  } else if (cat1 - mouse < cat2 - mouse) {
-    return "cat1";
-  } else {
-    return "cat2";
+  if (mouse - cat1 === cat2 - mouse || cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  } if (cat1 - mouse < cat2 - mouse) {
+    return 'cat1';
+  } if (cat2 - mouse < cat1 - mouse) {
+    return 'cat2';
   }
 }
-
-// Desafio 8 ------------------------------------------------------------------------------------------------------
-function fizzBuzz(nums) {
-  let result = [];
-
-  for (let index = 0; index < nums.length; index += 1) {
-    if (nums[index] % 3 === 0 && nums[index] % 5 === 0) {
-      result.push("fizzBuzz");
-    } else if (nums[index] % 3 === 0) {
-      result.push("fizz");
-    } else if (nums[index] % 5 === 0) {
-      result.push("buzz");
+const array = [2, 15, 7, 9, 45]
+// Desafio 8
+function fizzBuzz(arrayNumbers2) {
+  const arrayFizzBuzz = [];
+  for (let index = 0; index < arrayNumbers2.length; index += 1) {
+    if (arrayNumbers2[index] % 3 === 0 && arrayNumbers2[index] % 5 === 0) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (arrayNumbers2[index] % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
+    } else if (arrayNumbers2[index] % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
     } else {
-      result.push("bug!");
+      arrayFizzBuzz.push('bug!');
     }
   }
-  return result;
+  return arrayFizzBuzz;
 }
 
-// Desafio 9 ---------------------------------------------------------------------------------------------------
-function encode(sentence) {
-  for (let index = 0; index < sentence.length; index++) {
-    switch (sentence[index]) {
-      case "a":
-        sentence = sentence.replace("a", "1");
-      case "e":
-        sentence = sentence.replace("e", "2");
-      case "i":
-        sentence = sentence.replace("i", "3");
-      case "o":
-        sentence = sentence.replace("o", "4");
-      case "u":
-        sentence = sentence.replace("u", "5");
+
+
+// Desafio 9
+function encode(string) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+      case 'a':
+        string = string.replace('a', '1');
+      case 'e':
+        string = string.replace('e', '2');
+      case 'i':
+        string = string.replace('i', '3');
+      case 'o':
+        string = string.replace('o', '4');
+      case 'u':
+        string = string.replace('u', '5');
     }
   }
-  return sentence
+  return string;
 }
 
 function decode(code) {
-  for (let index = 0; index < code.length; index++) {
+  for (let index = 0; index < code.length; index += 1) {
     switch (code[index]) {
-      case "1":
-        code = code.replace("1", "a");
-      case "2":
-        code = code.replace("2", "e");
-      case "3":
-        code = code.replace("3", "i");
-      case "4":
-        code = code.replace("4", "o");
-      case "5":
-        code = code.replace("5", "u");
+      case '1':
+        code = code.replace('1', 'a');
+      case '2':
+        code = code.replace('2', 'e');
+      case '3':
+        code = code.replace('3', 'i');
+      case '4':
+        code = code.replace('4', 'o');
+      case '5':
+        code = code.replace('5', 'u');
     }
   }
   return code;
 }
 
 // Desafio 10
-function techList(arrayTechNames, personName) {
-  let techList = [];
+function techList(arrayTechNames, names) {
+  let arrayResultado = [];
   arrayTechNames.sort();
-  if (arrayTechNames.length!==0) {
+  if (arrayTechNames.length === 0) {
+    return 'Vazio!';
+  } else {
     for (let tech of arrayTechNames) {
-      techList.push({
+      arrayResultado.push({
         tech: tech,
-        name: personName,
+        name: names,
       });
     }
-    return techList;
-  } else {
-    return "Vazio!"
   }
+  return arrayResultado;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 module.exports = {
