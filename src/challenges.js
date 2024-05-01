@@ -9,15 +9,15 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  return string.split(' ');
+function splitSentence(code) {
+  return code.split(' ');
 }
 
 // console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-function concatName(arrayStrings) {
-  return arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
+function concatName(arraycodes) {
+  return arraycodes[arraycodes.length - 1] + ', ' + arraycodes[0];
 }
 
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -88,12 +88,72 @@ function fizzBuzz(arrayNumbers2) {
 }
 
 // Desafio 9
-function encode(string) {}
+function encode(code) {
+  for (let index = 0; index < code.length; index++) {
+    switch (code[index]) {
+      case 'a':
+        code = code.replace('a', 1);
+        break;
+      case 'e':
+        code = code.replace('e', 2);
+        break;
+      case 'i':
+        code = code.replace('i', 3);
+        break;
+      case 'o':
+        code = code.replace('o', 4);
+        break;
+      case 'u':
+        code = code.replace('u', 5);
+        break;
+    }
+  }
+  return code;
+}
 
-function decode(code) {}
+// console.log(encode('hi there!'));
+
+function decode(code) {
+  for (let index = 0; index < code.length; index++) {
+    switch (code[index]) {
+      case '1':
+        code = code.replace(1, 'a');
+        break;
+      case '2':
+        code = code.replace('2', 'e');
+        break;
+      case '3':
+        code = code.replace('3', 'i');
+        break;
+      case '4':
+        code = code.replace('4', 'o');
+        break;
+      case '5':
+        code = code.replace('5', 'u');
+        break;
+    }
+  }
+  return code;
+}
 
 // Desafio 10
-function techList(arrayTechNames, names) {}
+function techList(arrayTechNames, names) {
+  let arrayResultado = [];
+  arrayTechNames.sort();
+  if (arrayTechNames.length === 0 || !arrayTechNames ) {
+    return 'Vazio!';
+  } else {
+    for (let tecnology of arrayTechNames) {
+      arrayResultado.push({
+        tech: tecnology,
+        name: names,
+      });
+    }
+  }
+  return arrayResultado;
+}
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 module.exports = {
   calcArea,
